@@ -82,7 +82,10 @@
 
     if (empty($_POST['province'])) {echo "";}
     else {echo"จังหวัด$_POST[province]<br>";}
-    echo"$_POST[arcade]";
+    
+    echo"$_POST[arcade]<br>";
+
+    echo"<br>";
 
     if (empty($_POST['teacher_name'])) {echo "";}
     else {echo"ครูที่ปรึกษา<br>$_POST[teacher_name]<br><br>";}
@@ -115,7 +118,10 @@
 
     echo"ผลที่คาดว่าจะได้รับ<br>$_POST[expect]<br>";
     
-    echo"นิยามศัพท์เฉพาะ<br>$_POST[vocab]<br><br>";
+    if (empty($_POST['vocab'])) {echo "";}
+    else {echo"นิยามศัพท์เฉพาะ<br>$_POST[vocab]<br>";}
+
+    echo"<br>";
 
 //wait
 
@@ -129,6 +135,8 @@
 
     echo"ขั้นตอนการดำเนินงาน$_POST[process2]<br>";
 
+    echo"<br>";
+
 //wait
 
     echo"สรุปผลการศึกษา$_POST[conclude]<br>";
@@ -140,9 +148,13 @@
     else {echo"ปัญหาและอุปสรรค<br>$_POST[problems]<br><br>";}
 
     if (empty($_POST['suggestion'])) {echo "";}
-    else {echo"ข้อเสนอแนะ<br>$_POST[suggestion]<br><br>";}
+    else {echo"ข้อเสนอแนะ<br>$_POST[suggestion]<br>";}
+
+    echo"<br>";
 
     echo"บรรณานุกรม$_POST[bibliography]<br>";
+
+    echo"<br>";
 
 //wait
 
