@@ -40,6 +40,15 @@
 
 
  <body>
+ <style>
+    body {
+        height: 842px;
+        width: 595px;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
 
     <div class="text-center" style="padding:20px;"></div>
     <button onclick="generatePDF()">Download</button>
@@ -51,18 +60,88 @@
 <?php
     error_reporting(E_NOTICE);
     echo"$_POST[project_name]<br><br>";
+
     echo"$_POST[doc_creater]<br><br>";
-    echo"โครงงานนี้เป็นส่วนหนึ่งของ$_POST[project_about]<br>";
-    echo"$_POST[grade]<br>";
-    echo"ภาคเรียนที่ $_POST[term] ";
-    echo"ปีการศึกษา $_POST[school_year]<br>";
-    echo"กลุ่มสาระการเรียนรู้$_POST[subject_areas]<br>";
-    echo"โรงเรียน$_POST[school_name]<br>";
-    echo"อำเภอ$_POST[district] ";
-    echo"จังหวัด$_POST[province]<br>";
-    echo"$_POST[arcade]";
     
-        
+    echo"โครงงานนี้เป็นส่วนหนึ่งของ$_POST[project_about]<br>";
+
+    if (empty($_POST['grade'])) {echo "";}
+    else {echo"$_POST[grade]<br>";}
+
+    if (empty($_POST['term'])) {echo "";}
+    else {echo"ภาคเรียนที่ $_POST[term] ";}
+
+    echo"ปีการศึกษา $_POST[school_year]<br>";
+
+    echo"กลุ่มสาระการเรียนรู้$_POST[subject_areas]<br>";
+
+    echo"โรงเรียน$_POST[school_name]<br>";
+
+    if (empty($_POST['district'])) {echo "";}
+    else {echo"อำเภอ$_POST[district] ";}
+
+    if (empty($_POST['province'])) {echo "";}
+    else {echo"จังหวัด$_POST[province]<br>";}
+    echo"$_POST[arcade]";
+
+    if (empty($_POST['teacher_name'])) {echo "";}
+    else {echo"ครูที่ปรึกษา<br>$_POST[teacher_name]<br><br>";}
+
+    if (empty($_POST['abstract'])) {echo "";}
+    else {echo"บทคัดย่อ<br>$_POST[abstract]<br><br>";}
+
+    if (empty($_POST['preface'])) {echo "";}
+    else {echo"บทนำ<br>$_POST[preface]<br><br>";}
+
+    echo"กิตติกรรมประกาศ<br>$_POST[thanks]<br><br>";
+
+    echo"ที่มาและความสำคัญ<br>$_POST[important]<br><br>";
+
+    if (empty($_POST['hypothesis'])) {echo "";}
+    else {echo"สมมติฐาน<br>$_POST[hypothesis]<br>";}
+
+    if (empty($_POST['variable1'])) {echo "";}
+    else {echo"ตัวแปรต้นหรือตัวแปรอิสระ<br>$_POST[variable1]<br>";}
+
+    if (empty($_POST['variable2'])) {echo "";}
+    else {echo"ตัวแปรตาม<br>$_POST[variable2]<br>";}
+
+    if (empty($_POST['variable3'])) {echo "";}
+    else {echo"ตัวแปรควบคุม<br>$_POST[variable3]<br>";}
+
+    echo"ขอบเขต<br>$_POST[scope]<br>";
+
+    echo"วิธีการดำเนินการ<br>$_POST[process]<br>";
+
+    echo"ผลที่คาดว่าจะได้รับ<br>$_POST[expect]<br>";
+    
+    echo"นิยามศัพท์เฉพาะ<br>$_POST[vocab]<br><br>";
+
+//wait
+
+    echo"วัสดุ อุปกรณ์ เครื่องมือ และโปรแกรมที่ใช้พัฒนา$_POST[equip]<br>";
+
+    if (empty($_POST['chem'])) {echo "";}
+    else {echo"สารเคมี<br>$_POST[chem]<br><br>";}
+
+    if (empty($_POST['creature'])) {echo "";}
+    else {echo"สิ่งมีชีวิต<br>$_POST[creature]<br><br>";}
+
+    echo"ขั้นตอนการดำเนินงาน$_POST[process2]<br>";
+
+    echo"สรุปผลการศึกษา$_POST[conclude]<br>";
+
+    if (empty($_POST['debate'])) {echo "";}
+    else {echo"อภิปรายผล<br>$_POST[debate]<br><br>";}
+
+    if (empty($_POST['problems'])) {echo "";}
+    else {echo"ปัญหาและอุปสรรค<br>$_POST[problems]<br><br>";}
+
+    if (empty($_POST['suggestion'])) {echo "";}
+    else {echo"ข้อเสนอแนะ<br>$_POST[suggestion]<br><br>";}
+
+    echo"บรรณานุกรม$_POST[bibliography]<br>";
+
 ?>
 
 </div>

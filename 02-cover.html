@@ -11,7 +11,7 @@
 
   <!--[Header] click at loco to link into home page / 0ld variable = nav-link text-warning(add link)-->
 <div class="header">
-  <link rel="stylesheet" href="01.css"> <!--a href="#default"-->
+  <link rel="stylesheet" href="02.css"> <!--a href="#default"-->
     <a href="01-home.html" class="logo">
     <b class="text-white", style="color: #26d9f5;">Quick </b>
     <b style="color: #000000;">Report Maker</b></a>
@@ -28,7 +28,6 @@
 
  
  <body>
-    <link rel="stylesheet" href="02.css">
     <div class="component">
         <b class="text-white", style="color: #26d9f5 (188, 61%, 54%);">Component</b>
         <ul class="navbar">    
@@ -42,20 +41,36 @@
             <li><a href="11-appendix.html">     ภาคผนวก</a>
     </div>
 
-<div class="topic-compo"><b>หน้าปก</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</div>
+<!--<div class="topic-compo"><b>หน้าปก</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>-->
  
-<form method="post", action="00organizeforlaod.php">
-<button type="submit" name="submit" id="save-button" value="save">save</button>
+<form method="post", action="00organizeforload.php">
+  <button type="submit" name="submit" id="save-button" value="save">save</button>
+<script src="main.js"></script>
+<div class="autosave-massage">All changes saved.</div>
 
-<div class="line-topic-compo"><hr></div>
+<style>
+  .autosave-message {
+    text-align: right;
+    columns: greenyellow;
+    right: 10%;
+    top: 20px;
+  }
 
-<div class="cover-ans">
+  .autosave-message--saving {
+    color: #999999;
+  }
+
+</style>
+
+<!--<div class="line-topic-compo"><hr></div>-->
+
+  <div class="cover-ans">
     <p>ชื่อรายงาน : <input name="project_name" maxlength="100" type="text" id="project_name" size="79" placeholder="ex. ความผิดพลาดของ IoT" value=""
-    required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></p>
+    required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')" autofocus data-autosave-url="http://localhost/02_407_ReportMaker/00organizeforload.php"></p>
 
-    <p>ผู้จัดทำ : <textarea rows="10" cols="83" name="doc_creater" maxlength="500" type="text" id="doc_creater" placeholder="นางสาวโกโก้ อร่อยดี<br>นายเต๋า สามเหลี่ยม (ระยะระหว่างชื่อ-นามสกุล 1 space bar, เติม <br> เพื่อขึ้นบรรทัดใหม่)" 
-    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+    <p>ผู้จัดทำ : <textarea rows="6" cols="83" name="doc_creater" maxlength="500" type="text" id="doc_creater" placeholder="นางสาวโกโก้ อร่อยดี<br>นายเต๋า สามเหลี่ยม (ระยะระหว่างชื่อ-นามสกุล 1 space bar, เติม <br> เพื่อขึ้นบรรทัดใหม่)" 
+    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')" autofocus data-autosave-url="http://localhost/02_407_ReportMaker/00organizeforload.php"></textarea></p>
 
     <p>โครงงานนี้เป็นส่วนหนึ่งของ :  <input name="project_about" maxlength="100" type="text" id="project_about" size="59" placeholder="กิจกรรมชุมนุมหรือวิชาต่างๆ" value=""
      minlength="2"></p>
@@ -84,15 +99,88 @@
     <p>สำนักงานเขตพื้นที่การศึกษา : <input name="arcade" maxlength="100" type="text" id="arcade" size="58" placeholder="สำนักงานเขตพื้นที่การศึกษามัธยมศึกษา เขต 34" value=""
     required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></p>
   
-  </form>
+    <p>ครูที่ปรึกษา : <input name="teacher_name" maxlength="100" type="text" id="teacher-name" size="79" placeholder="นางสาวไอติม ชาเขียว<br>นางสาวช็อกโกเเลต มิ้น<br>นางสาวโรตี ลูกเกด" value="" minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></p>
+
+    <p>บทคัดย่อ : <textarea rows="10" cols="83" name="abstract" maxlength="500" type="text" id="abstract" placeholder="การเขียนบทคัดย่อ จะต้องกล่าวถึงหัวข้อต่อไปนี้
+     - ชื่อโครงงาน
+     - วัตถุประสงค์
+     - ส่วนประกอบของโครงงาน
+     - วิธีดำเนินการ
+     - สรุปผลดำเนินการ
+     ความยาวไม่เกิน 1/2 หน้ากระดาษ" value="" minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
   
-</div>
-   <style type="text/css">
+   <p>คำนำ : <textarea rows="10" cols="83" name="preface" maxlength="500" type="text" id="preface" placeholder="รายงานนี้จัดทำขึ้นเพื่อเป็นส่วนหนึ่งของวิชา...ชั้น...เพื่อให้ได้ศึกษาหาความรู้ใน เรื่อง...
+     เเละได้ศึกษาอย่างเข้าใจเพื่อเป็นประโยชน์กับผู้อ่าน หรือนักเรียน นักศึกษา ที่กำลังหาข้อมูลเรื่องนี้อยู่หากมีข้อเเนะนำหรือข้อผิดพลาดประการใด ผู้จัดทำขอน้อมรับไว้เเละขอ อภัยมา ณ ที่นี้ด้วย" value="" minlength="2"></textarea></p>
 
-    </style>
+   <p>กิตติกรรมประกาศ : <textarea rows="10" cols="83" name="thanks" maxlength="500" type="text" id="doc-creater" placeholder="กิตติกรรมประกาศเป็นส่วนที่ผู้ทำโครงงานเขียนแสดงความขอบคุณบุคคล
+      สถาบัน หน่วยงานที่ให้ความช่วยเหลือ ให้ความร่วมมือทั้งในการค้นคว้าความรู้การดำเนินงาน ให้ข้อคิดเห็นและให้ข้อมูล" 
+      value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>   
+  
+   <p>ที่มาเเละความสำคัญ : <textarea rows="10" cols="83" name="important" maxlength="500" type="text" id="important" placeholder="ปัจจุบันเทคโนโลยีสารสนเทศเเละอินเทอร์เน็ตได้เข้ามามีบทบาทต่อ...." 
+        value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+    
+   <p>วัตถุประสงค์ : <textarea rows="10" cols="83" name="objective" maxlength="500" type="text" id="objective" placeholder="1.) เพื่อ...<br>2.)เพื่อ... (เติม <br> เพื่อขึ้นบรรทัดวัตถุประสงค์เเต่ละข้อใหม่)
+    "value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p> 
+        
+   <p>สมมติฐาน : <input name="hypothesis" maxlength="100" type="text" id="hypothesis" size="79" value="" minlength="2" placeholder="เป็นกระบวนการคาดคะเนคำตอบ โดยอาศัยจากการสังเกต ประสบการณ์เดิม หรือคลังความรู้ที่มีอยู่"></p>
+  
+   <p>ตัวเเปรต้น : <input name="variable1" maxlength="100" type="text" id="variable1" size="79" value="" minlength="2" placeholder="สิ่งที่ต้องการศึกษา เป็นตัวแปรที่ถูกกำหนดขึ้นมา"></p>
+  
+   <p>ตัวเเปรตาม : <input name="variable2" maxlength="100" type="text" id="variable2" size="79" value="" minlength="2" placeholder="ผลที่เกิดจากการกระทำของตัวแปรต้น ตัวแปรตามนี้จะเปลี่ยนแปลงไปตามตัวแปรต้น"></p>
+  
+   <p>ตัวเเปรควบคุม : <input name="variable3" maxlength="100" type="text" id="variable3" size="79" value="" minlength="2" placeholder="สิ่งที่ต้องต้องควบคุมให้เหมือนกัน เท่ากัน ในการทดลอง"></p>
+  
+   <p>ขอบเขต : <textarea rows="3" cols="83" name="scope" maxlength="500" type="text" id="scope" placeholder="ขอบเขตที่ใช้ในการศึกษา" 
+   value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+ 
+   <p>วิธีการดำเนินการ : <textarea rows="10" cols="83" name="process" maxlength="500" type="text" id="process" placeholder="1.) กำหนดหัวข้อ<br>2.) รวบรวมข้อมูล (เติม <br> เพื่อขึ้นบรรทัดใหม่)"
+   value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+  
+   <p>ผลที่คาดว่าจะได้รับ : <textarea rows="7" cols="83" name="expect" maxlength="500" type="text" id="expect" placeholder="1.) นักเรียนรู้จักเลือกรับประทานอาหารที่มีประโยชน์ต่อร่างกายz<br>2.) นักเรียนมีทัศนคติที่ดีต่อการดูแลใส่ใจสุขภาพของตนเอง"
+   value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+  
+   <p>นิยามศัพท์เฉพาะ : <textarea rows="7" cols="83" name="vocab" maxlength="500" type="text" id="vocab" placeholder="Cryptocurrency มาจากการผสมค่าระหว่าง Crypto Graphy แปลว่า วิทยาการเข้ารหัส เข้ากับ Currency แปลว่า สกุลเงิน รวมความแล้วหมายถึง เงินในสกุลดิจิทัลที่ทำการเข้า รหัส และทํางานในระบบ Decentralized ที่ไม่ผ่านตัวกลาง"
+    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
    
+    <!--add data / each topics-->
 
+   <p>วัสดุ อุปกรณ์ เครื่องมือ และโปรแกรมที่ใช้พัฒนา : <textarea rows="10" cols="83" name="equip" maxlength="500" type="text" id="equip" placeholder="วัสดุคือ สิ่งของที่มีสภาพการใช้สิ้นเปลืองหรือเสื่อมสภาพลงเพราะการใช้งานโดยมีอายุการใช้งานน้อยกว่า 1 ปี อุปกรณ์คือ สิ่งของที่มีอายุการใช้งานนาน คงทน โดยอาจรวมเครื่องมือพิเศษที่หาไม่ได้ทั่วไปในโรงเรียน และหากเป็นเครื่องมือมาตรฐานที่รู้จักแพร่หลายควรระบุชื่อบริษัทที่ผลิตรุ่น (model) ถ้าเป็นเครื่องมือที่ประดิษฐ์ขึ้นเองต้องอธิบายหลักการ แบบ และการทำงาน"
+   value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+  
+   <p>สารเคมี : <textarea rows="5" cols="83" name="chem" maxlength="500" type="text" id="chem" placeholder="เขียนเป็นภาษาไทยตามศัพท์บัญญัติโดยราชบัณฑิต และควรระบุเป็นชื่อภาษาอังกฤษ พร้อมวงเล็บสูตรเคมีไว้ท้ายชื่อ"
+   value="" minlength="2"></textarea></p>
+  
+   <p>สิ่งมีชีวิต : <textarea rows="5" cols="83" name="creature" maxlength="500" type="text" id="creature" placeholder=" ต้องบอกทั้งชื่อสามัญและชื่อวิทยาศาสตร์พร้อมหมวดหมู่ตามหลักอนุกรมวิธาน"
+    value="" minlength="2"></textarea></p>
+   
+   <p>ขั้นตอนการดำเนินงาน : <textarea rows="10" cols="83" name="process2" maxlength="500" type="text" id="process2" placeholder="1.) จัดทำโครงร่างโครงงานคอมพิวเตอร์เพื่อนำเสนอครูที่ปรึกษาผ่านเว็บบล็อกของ ตัวเอง โดยได้นำไฟล์ข้อมูลไปฝากไว้ที่เว็บไซต์ชื่อ http://www.slideshare.net  <br>2.) ปฏิบัติการจัดทำโครงงานคอมพิวเตอร์การพัฒนาเว็บบล็อก (WebBlog) ด้วย Wordpress เรื่อง ไวรัสคอมพิวเตอร์ โดยการสมัครสมาชิก และสร้างบทเรียนที่สนใจตามแบบเสนอ โครงร่างที่เสนอไว้แล้ว ทั้งนี้ได้นำเสนอบทเรียนผ่านเว็บบล็อกที่ podprs. <br>3.) นำเสนอรายงานความก้าวหน้าเป็นระยะๆ โดยแจ้งให้ครูที่ปรึกษาโครงงานเข้าไป ตรวจความก้าวหน้าของโครงงานผ่านเว็บไซต์ www.freebok.com/ChampRmCitnFn (เติม <br> เพื่อขึ้นบรรทัดใหม่)"
+    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+
+   <!--add data pics / experiment-->
+
+   <p>สรุปผลการศึกษา : <textarea rows="10" cols="83" name="conclude" maxlength="500" type="text" id="conclude" placeholder="โครงงานคณิตศาสตร์เรื่อง การให้เหตุผลแบบอุปนัยในชีวิตประจำวันนี้ เป็นโครงงานที่ เน้นหลักความจริง และต้องใช้ความคิดพิจารณาในการให้เหตุผลแบบอุปนัย และจะต้องนึกถึงหลักความเป็นจริง ถ้าเหตุการณ์ต่างๆ เป็นจริง ก็จะสรุปได้ว่าสมเหตุสมผลตามหลักความเป็นจริง และ ถ้าไม่เป็นจริง ก็ไม่สามารถสรุปได้ว่าสมเหตุสมผล และไม่เป็นจริง" 
+   value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+
+   <p>อภิปรายผล : <textarea rows="10" cols="83" name="debate" maxlength="500" type="text" id="debate" placeholder="สิ่งประดิษฐ์เป็นไปตามที่คาดไว้ ที่ทำขึ้นจากกระดาษเหลือใช้ที่เอามาอัดกัน (กระดาษ อัด) ซึ่งเป็นสิ่งประดิษฐ์ที่ไม่สิ้นเปลืองเงิน ราคาถูก และนำสิ่งของมาใช้ประโยชน์ได้อย่าง หลากหลาย โดยที่ไม่ต้องเปลืองเงินไปซื้อโคมไฟสำเร็จรูปในราคาแพงๆ" 
+   value="" minlength="2"></textarea></p>
+
+   <p>ปัญหาและอุปสรรค : <textarea rows="6" cols="83" name="problems" maxlength="500" type="text" id="problems" placeholder="1.) ไม่มีความชำนาญในการใช้เลื่อยในการทำงาน<br>2.) ไม่สามารถเลื่อยกระดาษอัดให้ได้รูปตามที่ต้องการ (เติม <br> เพื่อขึ้นบรรทัดใหม่)"
+   value="" minlength="2"></textarea></p>
+
+   <p>ข้อเสนอเเนะ : <textarea rows="6" cols="83" name="suggestion" maxlength="500" type="text" id="suggestion" placeholder="1.) ควรเจาะช่องบริเวณหน้าต่างให้มากกว่าเดิม เพื่อให้มีแสงสว่างมากยิ่งขึ้น<br>2.) ควรศึกษาวิธีการเลื่อยกระดาษอัดให้สวย<br>3.) ควรวางแผนในการเลือกซื้อโคมไฟ (เติม <br> เพื่อขึ้นบรรทัดใหม่)" 
+   value="" minlength="2"></textarea></p>
+
+   <p>บรรณานุกรม : <textarea rows="10" cols="83" name="bibliography" maxlength="500" type="text" id="bibliography" placeholder="ผู้แต่ง 1./(ปีพิมพ์).//ชื่อเรื่อง/(พิมพ์ครั้งที่).//สถานที่พิมพ์:/สํานักพิมพ์.<br>ผู้แต่ง./(ปีพิมพ์).//ชื่อบทความ./สืบค้น หรือ Retrieved/วัน เดือน ปี,//จาก หรือ from/http://www.xxxxxxxxxx (เติม <br> เพื่อขึ้นบรรทัดใหม่)" 
+    value="" required minlength="2"></textarea></p>
+  
+  <!--add data pics / evidence-->
+
+
+    </form>
+  
   </div>
+   
+</div>
 
  </body>
 
