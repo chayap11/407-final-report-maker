@@ -129,6 +129,8 @@
 
     echo"ขั้นตอนการดำเนินงาน$_POST[process2]<br>";
 
+//wait
+
     echo"สรุปผลการศึกษา$_POST[conclude]<br>";
 
     if (empty($_POST['debate'])) {echo "";}
@@ -141,6 +143,8 @@
     else {echo"ข้อเสนอแนะ<br>$_POST[suggestion]<br><br>";}
 
     echo"บรรณานุกรม$_POST[bibliography]<br>";
+
+//wait
 
 ?>
 
