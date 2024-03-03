@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+
+ <head>
+    <title>Organize your Report quickly | Quick Report</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#dc577e">
+<meta name="author" content="Chaya's Team">
+
+  <!--[Header] click at loco to link into home page / 0ld variable = nav-link text-warning(add link)-->
+<div class="header">
+  <link rel="stylesheet" href="01.css"> <!--a href="#default"-->
+    <a href="01-home.html" class="logo">
+    <b class="text-white", style="color: #26d9f5;">Quick </b>
+    <b style="color: #000000;">Report Maker</b></a>
+  <link rel="stylesheet" href="00organizeforload.php">
+    <!--เดี๋ยวเพิ่มระบบบัญชีมุมขวาบน
+    <div class="header-right">
+      <img src="https://images.app.goo.gl/tQafN5FeJsSh3K9V9">
+    </div>-->
+
+
+</div>
+
+ </head>
+
+ 
+ <body>
+    <link rel="stylesheet" href="02.css">
+    <div class="component">
+        <b class="text-white", style="color: #26d9f5 (188, 61%, 54%);">Component</b>
+        <ul class="navbar">    
+            <li><a href="02-cover.html">    หน้าปก</a>
+            <li><a href="03-preface.html">     คำนำ/บทคัดย่อ</a>
+            <li><a href="04-thankna.html">     กิตติกรรมประกาศ</a>
+            <li><a href="05-intro.html">     บทนำ</a>
+            <li><a href="06-data.html">     เนื้อหา</a>
+            <li><a href="09-arumsumsumna.html">     บทสรุป</a>
+            <li><a href="10-references.html">     บรรณานุกรม</a>
+            <li><a href="11-appendix.html">     ภาคผนวก</a>
+    </div>
+
+<div class="topic-compo"><b>หน้าปก</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+ 
+<form method="post", action="00organizeforlaod.php">
+<button type="submit" name="submit" id="save-button" value="save">save</button>
+
+<div class="line-topic-compo"><hr></div>
+
+<div class="cover-ans">
+    <p>ชื่อรายงาน : <input name="project_name" maxlength="100" type="text" id="project_name" size="79" placeholder="ex. ความผิดพลาดของ IoT" value=""
+    required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></p>
+
+    <p>ผู้จัดทำ : <textarea rows="10" cols="83" name="doc_creater" maxlength="500" type="text" id="doc_creater" placeholder="นางสาวโกโก้ อร่อยดี<br>นายเต๋า สามเหลี่ยม (ระยะระหว่างชื่อ-นามสกุล 1 space bar, เติม <br> เพื่อขึ้นบรรทัดใหม่)" 
+    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+
+    <p>โครงงานนี้เป็นส่วนหนึ่งของ :  <input name="project_about" maxlength="100" type="text" id="project_about" size="59" placeholder="กิจกรรมชุมนุมหรือวิชาต่างๆ" value=""
+     minlength="2"></p>
+
+    <p>ระดับชั้น :  <input name="grade" maxlength="100" id="grade" size="23" placeholder="มัธยมศึกษาปีที่ 4" value=""
+     minlength="2"></p>
+
+    <p>ภาคเรียนที่ : <input name="term" maxlength="100" type="number" id="term" placeholder="ตัวเลขเท่านั้น" value=""
+     minlength="2"></p>
+
+    <p>ปีการศึกษา : <input name="school_year" maxlength="100" type="number" id="school_year" placeholder="ตัวเลขเท่านั้น" value=""
+    required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></p>
+
+    <p>กลุ่มสาระการเรียนรู้ : <input name="subject_areas" maxlength="100" type="text" id="subject_areas" size="69" placeholder="เทคโนโลยีและสารสนเทศ" value=""
+    required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></p>
+    
+    <p>โรงเรียน : <input name="school_name" maxlength="100" type="text" id="school_name" size="82" placeholder="ยุพราชวิทยาลัย" value=""
+    required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></p>
+
+    <p>อำเภอ : <input name="district" maxlength="100" type="text" id="district" size="85" placeholder="เมือง" value=""
+     minlength="2"></p>
+
+    <p>จังหวัด : <input name="province" maxlength="100" type="text" id="province" size="84" placeholder="เชียงใหม่" value=""
+     minlength="2"></p>
+
+    <p>สำนักงานเขตพื้นที่การศึกษา : <input name="arcade" maxlength="100" type="text" id="arcade" size="58" placeholder="สำนักงานเขตพื้นที่การศึกษามัธยมศึกษา เขต 34" value=""
+    required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></p>
+  
+  </form>
+  
+</div>
+   <style type="text/css">
+
+    </style>
+   
+
+  </div>
+
+ </body>
+
+
+
+ </html>
