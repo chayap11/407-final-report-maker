@@ -141,3 +141,7 @@ body {
 #save-button:hover { 
   background-color: #14bbd5; 
 } 
+
+.autosave-message {
+right: 10px;
+}

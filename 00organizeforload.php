@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="01-home.html, 02-cover.html, 03-preface.html, 04-thankna.html, 05-intro.html, 06-data.html, 07-method.html, 08-result.html, 09-arumsumsumna.html, 10-references.html, 11-appendix.html">
-<link rel="stylesheet" href="main.py">
+<link rel="stylesheet" href="02-cover.html">
+<link rel="stylesheet" href="toktangpdf.css">
 
 
 <!--link to java downloadpage-->
@@ -53,9 +53,7 @@
     <div class="text-center" style="padding:20px;"></div>
     <button onclick="generatePDF()">Download</button>
 
-    <div class="container_content" id="container_content" >
-
-<div class="invoice-box">
+<div class="topdf">
 
 <?php
     error_reporting(E_NOTICE);
@@ -125,7 +123,7 @@
 
 //wait
 
-    echo"วัสดุ อุปกรณ์ เครื่องมือ และโปรแกรมที่ใช้พัฒนา$_POST[equip]<br>";
+    echo"วัสดุ อุปกรณ์ เครื่องมือ และโปรแกรมที่ใช้พัฒนา<br>$_POST[equip]<br>";
 
     if (empty($_POST['chem'])) {echo "";}
     else {echo"สารเคมี<br>$_POST[chem]<br><br>";}
@@ -133,13 +131,13 @@
     if (empty($_POST['creature'])) {echo "";}
     else {echo"สิ่งมีชีวิต<br>$_POST[creature]<br><br>";}
 
-    echo"ขั้นตอนการดำเนินงาน$_POST[process2]<br>";
+    echo"ขั้นตอนการดำเนินงาน<br>$_POST[process2]<br>";
 
     echo"<br>";
 
 //wait
 
-    echo"สรุปผลการศึกษา$_POST[conclude]<br>";
+    echo"สรุปผลการศึกษา<br>$_POST[conclude]<br>";
 
     if (empty($_POST['debate'])) {echo "";}
     else {echo"อภิปรายผล<br>$_POST[debate]<br><br>";}
@@ -152,7 +150,7 @@
 
     echo"<br>";
 
-    echo"บรรณานุกรม$_POST[bibliography]<br>";
+    echo"บรรณานุกรม<br>$_POST[bibliography]<br>";
 
     echo"<br>";
 
