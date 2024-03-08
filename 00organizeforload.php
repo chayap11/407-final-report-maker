@@ -27,7 +27,7 @@
     var opt = {
           margin:       1,
           filename:     'ReportMaker_project.pdf',
-          image:        { type: 'jpeg', quality: 2 },
+          image:        { type: 'pdf', quality: 2 },
           html2canvas:  { scale: 2 },
           jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
         };
