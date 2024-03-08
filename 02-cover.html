@@ -217,9 +217,15 @@
       value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>   
   
       <script>
+<<<<<<< HEAD
         thanks.value = localStorage.getItem('thanks');
         thanks.oninput = () => {
           localStorage.setItem('thanks', thanks.value)
+=======
+        doc-creater.value = localStorage.getItem('doc-creater');
+        doc-creater.oninput = () => {
+          localStorage.setItem('doc-creater', doc-creater.value)
+>>>>>>> f44b35cf69b8b16c3c2328bdc1b3f6a16e4fdb9b
         };
     </script>
 
