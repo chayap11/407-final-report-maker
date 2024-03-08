@@ -38,7 +38,6 @@
 
 </head>
 
-
  <body>
  <style>
     body {
@@ -53,6 +52,7 @@
     <div class="text-center" style="padding:20px;"></div>
     <button onclick="generatePDF()">Download</button>
 
+    <div class="container_content" id="container_content" >
 <div class="topdf">
 
 <?php
@@ -159,6 +159,7 @@
 ?>
 
 </div>
+    </div>
 
  </body>
   
