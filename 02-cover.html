@@ -32,21 +32,21 @@
     <div class="component">
         <b class="text-white", style="color: #26d9f5 (188, 61%, 54%);">Component</b>
         <ul class="navbar">    
-            <li><a href="02-cover.html">    หน้าปก</a>
-            <li><a href="03-preface.html">     คำนำ/บทคัดย่อ</a>
-            <li><a href="04-thankna.html">     กิตติกรรมประกาศ</a>
-            <li><a href="05-intro.html">     บทนำ</a>
-            <li><a href="06-data.html">     เนื้อหา</a>
-            <li><a href="09-arumsumsumna.html">     บทสรุป</a>
-            <li><a href="10-references.html">     บรรณานุกรม</a>
-            <li><a href="11-appendix.html">     ภาคผนวก</a>
+            <li><a href="#top">    หน้าปก</a>
+            <li><a href="#province">     คำนำ/บทคัดย่อ</a>
+            <li><a href="#preface">     กิตติกรรมประกาศ</a>
+            <li><a href="#thanks">     บทนำ</a>
+            <li><a href="#vocab">     เนื้อหา</a>
+            <li><a href="#result">     บทสรุป</a>
+            <li><a href="#suggestion">     บรรณานุกรม</a>
+            <li><a href="#bottom">     ภาคผนวก</a>
     </div>
 
 <!--<div class="topic-compo"><b>หน้าปก</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </div>-->
  
 <form method="post", action="00organizeforload.php">
-  <button type="submit" name="submit" id="save-button" value="save">save</button>
+  <button type="submit" name="submit" id="save-button" value="save">send</button>
 <!--<script src="main.js"></script>-->
 
 
@@ -164,7 +164,7 @@
       };
   </script>
 
-    <p>ครูที่ปรึกษา : <input name="teacher_name" maxlength="100" type="text" id="teacher-name" size="74" placeholder="นางสาวไอติม ชาเขียว<br>นางสาวช็อกโกเเลต มิ้น<br>นางสาวโรตี ลูกเกด" value="" minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></p>
+    <p>ครูที่ปรึกษา : <input name="teacher_name" maxlength="100" type="text" id="teacher_name" size="74" placeholder="นางสาวไอติม ชาเขียว<br>นางสาวช็อกโกเเลต มิ้น<br>นางสาวโรตี ลูกเกด" value="" minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></p>
 
     <script>
       teacher_name.value = localStorage.getItem('teacher_name');
@@ -521,8 +521,8 @@
      </script>
 
 
-   <textarea rows="10" cols="83" name="evid" maxlength="500" type="text" id="evid" placeholder="ผลการดำเนินงาน1 ผลการดำเนินงาน1 ผลการดำเนินงาน1 ผลการดำเนินงาน1"
-    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+   <textarea rows="10" cols="83" name="evid" maxlength="500" type="text" id="evid" placeholder="หลักฐาน ภาคผนวก หลักฐาน ภาคผนวก หลักฐาน ภาคผนวก"
+    value="" minlength="2" ></textarea></p>
     
     <script>
      evid.value = localStorage.getItem('evid');

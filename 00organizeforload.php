@@ -54,7 +54,7 @@
 
     <div class="container_content" id="container_content" >
 <div class="topdf">
-
+<form action="toktangpdf.css">
 <?php
     error_reporting(E_NOTICE);
     echo"$_POST[project_name]<br><br>";
@@ -188,7 +188,7 @@ else {echo "<img src = '$_POST[myfile2]'>";}
 if (empty($_POST['evid'])) {echo "";}
 else {echo"$_POST[evid]><br><br>";}
 ?>
-
+</form>
 </div>
     </div>
 
