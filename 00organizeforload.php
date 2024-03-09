@@ -123,6 +123,21 @@
 
 //wait
 
+    if (empty($_POST['datatopic1'])) {echo "";}
+    else {echo"$_POST[datatopic1]<br>";}
+    if (empty($_POST['data1'])) {echo "";}
+    else {echo"$_POST[data1]<br><br>";}
+
+    if (empty($_POST['datatopic2'])) {echo "";}
+    else {echo"$_POST[datatopic2]<br>";}
+    if (empty($_POST['data2'])) {echo "";}
+    else {echo"$_POST[data2]<br><br>";}
+
+    if (empty($_POST['datatopic3'])) {echo "";}
+    else {echo"$_POST[datatopic3]<br>";}
+    if (empty($_POST['data3'])) {echo "";}
+    else {echo"$_POST[data3]<br><br>";}
+
     echo"วัสดุ อุปกรณ์ เครื่องมือ และโปรแกรมที่ใช้พัฒนา<br>$_POST[equip]<br>";
 
     if (empty($_POST['chem'])) {echo "";}

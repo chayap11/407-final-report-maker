@@ -16,7 +16,7 @@
     <b class="text-white", style="color: #26d9f5;">Quick </b>
     <b style="color: #000000;">Report Maker</b></a>
   <link rel="stylesheet" href="00organizeforload.php">
-  <link rel="stylesheet" href="main.js">
+  <link rel="stylesheet" href="data.js">
     <!--เดี๋ยวเพิ่มระบบบัญชีมุมขวาบน
     <div class="header-right">
       <img src="https://images.app.goo.gl/tQafN5FeJsSh3K9V9">
@@ -48,28 +48,14 @@
 <form method="post", action="00organizeforload.php">
   <button type="submit" name="submit" id="save-button" value="save">save</button>
 <!--<script src="main.js"></script>-->
-<div class="autosave-massage">All changes saved.</div>
 
-<style>
-  .autosave-message {
-    text-align: right;
-    columns: greenyellow;
-    right: 10%;
-    top: 20px;
-  }
-
-  .autosave-message--saving {
-    color: #999999;
-  }
-
-</style>
 
 <!--<div class="line-topic-compo"><hr></div>-->
 
   <div class="cover-ans">
 
     <p>ชื่อรายงาน<a style="color:red"> **</a> : <input name="project_name" maxlength="100" type="text" id="project_name" size="74" placeholder="ex. ความผิดพลาดของ IoT" value=""
-    required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')" autofocus data-autosave-url=""></p>
+    required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></p>
 
     <script>
       project_name.value = localStorage.getItem('project_name');
@@ -79,7 +65,7 @@
   </script>
 
     <p>ผู้จัดทำ<a style="color:red"> **</a> : <textarea rows="6" cols="83" name="doc_creater" maxlength="500" type="text" id="doc_creater" placeholder="นางสาวโกโก้ อร่อยดี<br>นายเต๋า สามเหลี่ยม (ระยะระหว่างชื่อ-นามสกุล 1 space bar, เติม <br> เพื่อขึ้นบรรทัดใหม่)" 
-    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')" autofocus data-autosave-url=""></textarea></p>
+    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
 
     <script>
       doc_creater.value = localStorage.getItem('doc_creater');
@@ -319,7 +305,57 @@
       };
   </script>
 
-    <!--add data / each topics 02 ข้อมูลที่เกี่ยวข้อง-->
+
+<!--add data / each topics 02 ข้อมูลที่เกี่ยวข้อง-->
+
+    <p>ข้อมูลที่เกี่ยวข้อง<a style="color:red"> **</a> : <br>
+      <input name="datatopic1" maxlength="100" type="text" id="datatopic1" size="79" value="" minlength="2" placeholder="[Topic 1] ประวัติศาสตร์ชนชาติไทย"></p>
+      <textarea rows="7" cols="83" name="data1" maxlength="500" type="text" id="data1" placeholder="กรอก [เนื้อหา 1] (เติม <br> เพื่อขึ้นบรรทัดใหม่ )"
+      value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+
+    <script>
+      datatopic1.value = localStorage.getItem('datatopic1');
+      datatopic1.oninput = () => {
+        localStorage.setItem('datatopic1', datatopic1.value)
+      };
+
+      data1.value = localStorage.getItem('data1');
+      data1.oninput = () => {
+        localStorage.setItem('data1', data1.value)
+      };
+    </script>
+
+    <input name="datatopic2" maxlength="100" type="text" id="datatopic2" size="79" value="" minlength="2" placeholder="[Topic 2] ประวัติศาสตร์ชนชาติไทย"></p>
+      <textarea rows="7" cols="83" name="data2" maxlength="500" type="text" id="data2" placeholder="กรอก [เนื้อหา 2] (เติม <br> เพื่อขึ้นบรรทัดใหม่ )"
+      value="" minlength="2"></textarea></p>
+
+    <script>
+      datatopic2.value = localStorage.getItem('datatopic2');
+      datatopic2.oninput = () => {
+        localStorage.setItem('datatopic2', datatopic2.value)
+      };
+
+      data2.value = localStorage.getItem('data2');
+      data2.oninput = () => {
+        localStorage.setItem('data2', data2.value)
+      };
+    </script>
+
+    <input name="datatopic3" maxlength="100" type="text" id="datatopic3" size="79" value="" minlength="2" placeholder="[Topic 3] ประวัติศาสตร์ชนชาติไทย"></p>
+      <textarea rows="7" cols="83" name="data3" maxlength="500" type="text" id="data3" placeholder="กรอก [เนื้อหา 3] (เติม <br> เพื่อขึ้นบรรทัดใหม่ )"
+      value="" minlength="2"></textarea></p>
+
+    <script>
+      datatopic3.value = localStorage.getItem('datatopic3');
+      datatopic3.oninput = () => {
+        localStorage.setItem('datatopic3', datatopic3.value)
+      };
+
+      data3.value = localStorage.getItem('data3');
+      data3.oninput = () => {
+        localStorage.setItem('data3', data3.value)
+      };
+    </script>
 
    <p>วัสดุ อุปกรณ์ เครื่องมือ และโปรแกรมที่ใช้พัฒนา<a style="color:red"> **</a> : <textarea rows="10" cols="83" name="equip" maxlength="500" type="text" id="equip" placeholder="วัสดุคือ สิ่งของที่มีสภาพการใช้สิ้นเปลืองหรือเสื่อมสภาพลงเพราะการใช้งานโดยมีอายุการใช้งานน้อยกว่า 1 ปี อุปกรณ์คือ สิ่งของที่มีอายุการใช้งานนาน คงทน โดยอาจรวมเครื่องมือพิเศษที่หาไม่ได้ทั่วไปในโรงเรียน และหากเป็นเครื่องมือมาตรฐานที่รู้จักแพร่หลายควรระบุชื่อบริษัทที่ผลิตรุ่น (model) ถ้าเป็นเครื่องมือที่ประดิษฐ์ขึ้นเองต้องอธิบายหลักการ แบบ และการทำงาน"
    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
@@ -361,7 +397,10 @@
       };
   </script>
 
-   <!--add data pics / experiment 03 ผลการดำเนินงาน-->
+
+<!--add data pics / experiment 03 ผลการดำเนินงาน-->
+
+
 
    <p>สรุปผลการศึกษา<a style="color:red"> **</a> : <textarea rows="10" cols="83" name="conclude" maxlength="500" type="text" id="conclude" placeholder="โครงงานคณิตศาสตร์เรื่อง การให้เหตุผลแบบอุปนัยในชีวิตประจำวันนี้ เป็นโครงงานที่ เน้นหลักความจริง และต้องใช้ความคิดพิจารณาในการให้เหตุผลแบบอุปนัย และจะต้องนึกถึงหลักความเป็นจริง ถ้าเหตุการณ์ต่างๆ เป็นจริง ก็จะสรุปได้ว่าสมเหตุสมผลตามหลักความเป็นจริง และ ถ้าไม่เป็นจริง ก็ไม่สามารถสรุปได้ว่าสมเหตุสมผล และไม่เป็นจริง" 
    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
