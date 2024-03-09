@@ -400,7 +400,44 @@
 
 <!--add data pics / experiment 03 ผลการดำเนินงาน-->
 
+   <p>ผลการดำเนินงาน<a style="color:red"> **</a> :
+    <form action="" method="post" enctype="multipart/form-data" accept="image/*" onchange="previewImage(event)">
+      <input type="file" id="myfile1" name="myfile1">
+      <br><img id="blah1" src="#" alt="Preview Image1" width="300">
+      <script>
+        myfile1.onchange = evt => {
+          const [file] = myfile1.files
+          if (file) {
+            blah1.src = URL.createObjectURL(file)
+          }
+        }
+        </script>
 
+    </form>
+    <script>
+
+      myfile1.value = localStorage.getItem('myfile1');
+      myfile1.oninput = () => {
+        localStorage.setItem('myfile1', myfile1.value)
+      };
+
+      blah1.value = localStorage.getItem('blah1');
+      blah1.oninput = () => {
+        localStorage.setItem('blah1', blah1.value)
+      };
+
+     </script>
+
+
+   <textarea rows="10" cols="83" name="result" maxlength="500" type="text" id="result" placeholder="ผลการดำเนินงาน1 ผลการดำเนินงาน1 ผลการดำเนินงาน1 ผลการดำเนินงาน1"
+    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+    
+    <script>
+     result.value = localStorage.getItem('result');
+     result.oninput = () => {
+       localStorage.setItem('result', result.value)
+     };
+    </script>
 
    <p>สรุปผลการศึกษา<a style="color:red"> **</a> : <textarea rows="10" cols="83" name="conclude" maxlength="500" type="text" id="conclude" placeholder="โครงงานคณิตศาสตร์เรื่อง การให้เหตุผลแบบอุปนัยในชีวิตประจำวันนี้ เป็นโครงงานที่ เน้นหลักความจริง และต้องใช้ความคิดพิจารณาในการให้เหตุผลแบบอุปนัย และจะต้องนึกถึงหลักความเป็นจริง ถ้าเหตุการณ์ต่างๆ เป็นจริง ก็จะสรุปได้ว่าสมเหตุสมผลตามหลักความเป็นจริง และ ถ้าไม่เป็นจริง ก็ไม่สามารถสรุปได้ว่าสมเหตุสมผล และไม่เป็นจริง" 
    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
@@ -452,9 +489,50 @@
       };
   </script>
 
+
   <!--add data pics / evidence ภาคผนวก-->
+  
+  <p>ภาคผนวก :<form action="" method="post" enctype="multipart/form-data" accept="image/*" onchange="previewImage(event)">
+      <input type="file" id="myfile2" name="myfile2">
+      <img id="blah2" src="#" alt="Preview Image2" width="300">
+
+      <script>
+        myfile2.onchange = evt => {
+          const [file] = myfile2.files
+          if (file) {
+            blah2.src = URL.createObjectURL(file)
+          }
+        }
+        </script>
 
     </form>
+    <script>
+
+      myfile2.value = localStorage.getItem('myfile2');
+      myfile2.oninput = () => {
+        localStorage.setItem('myfile2', myfile2.value)
+      };
+
+      blah2.value = localStorage.getItem('blah2');
+      blah2.oninput = () => {
+        localStorage.setItem('blah2', blah2.value)
+      };
+
+     </script>
+
+
+   <textarea rows="10" cols="83" name="evid" maxlength="500" type="text" id="evid" placeholder="ผลการดำเนินงาน1 ผลการดำเนินงาน1 ผลการดำเนินงาน1 ผลการดำเนินงาน1"
+    value="" required minlength="2" oninvalid="this.setCustomValidity('กรุณากรอกข้อมูลสำคัญให้ครบถ้วน')" oninput="setCustomValidity('')"></textarea></p>
+    
+    <script>
+     evid.value = localStorage.getItem('evid');
+     evid.oninput = () => {
+       localStorage.setItem('evid', evid.value)
+     };
+    </script>
+
+    </form>
+  </p>
   
   </div>
    

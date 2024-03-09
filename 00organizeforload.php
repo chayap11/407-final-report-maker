@@ -121,7 +121,7 @@
 
     echo"<br>";
 
-//wait
+//wait finished
 
     if (empty($_POST['datatopic1'])) {echo "";}
     else {echo"$_POST[datatopic1]<br>";}
@@ -150,7 +150,16 @@
 
     echo"<br>";
 
-//wait
+//wait finished 20%
+    echo"<b>ผลการดำเนินงาน</b><br>";
+
+    if (empty($_POST['myfile1'])) {echo "";}
+    else {echo "<img src = '$_POST[myfile1]'>";}
+
+    if (empty($_POST['result'])) {echo "";}
+    else {echo"$_POST[result]><br><br>";}
+
+//
 
     echo"สรุปผลการศึกษา<br>$_POST[conclude]<br>";
 
@@ -169,8 +178,15 @@
 
     echo"<br>";
 
-//wait
+//wait finished 20%
 
+echo"<b>ภาคผนวก</b><br>";
+
+if (empty($_POST['myfile2'])) {echo "";}
+else {echo "<img src = '$_POST[myfile2]'>";}
+
+if (empty($_POST['evid'])) {echo "";}
+else {echo"$_POST[evid]><br><br>";}
 ?>
 
 </div>
